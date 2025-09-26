@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <string>
 #include <iostream>
+#include <cstdint>
 #define WIDTH 400
 #define HEIGHT 200
 
@@ -40,14 +41,15 @@ enum {
 
 // Window procedure
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+    uint16_t interval = 100;
     switch (msg) {
     case WM_KEYDOWN:
         if (!(lParam & 0x40000000)) { // prevent autorepeat from holding key
             switch (wParam) {
-            case VK_UP:    SetTimer(hWnd, TIMER_UP, 100, nullptr); break;
-            case VK_DOWN:  SetTimer(hWnd, TIMER_DOWN, 100, nullptr); break;
-            case VK_LEFT:  SetTimer(hWnd, TIMER_LEFT, 100, nullptr); break;
-            case VK_RIGHT: SetTimer(hWnd, TIMER_RIGHT, 100, nullptr); break;
+            case VK_UP:    SetTimer(hWnd, TIMER_UP, interval, nullptr); break;
+            case VK_DOWN:  SetTimer(hWnd, TIMER_DOWN, interval, nullptr); break;
+            case VK_LEFT:  SetTimer(hWnd, TIMER_LEFT, interval, nullptr); break;
+            case VK_RIGHT: SetTimer(hWnd, TIMER_RIGHT, interval, nullptr); break;
             }
         }
         break;
