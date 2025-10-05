@@ -1,8 +1,8 @@
-# GPRSerialTestSender
+# GPRSerialTestSender (OBSOLETE)
 
 ## Overview
 
-GPRSerialTestSender is a Windows C++ application designed to send test data over a serial port. It is intended for use in FLL team 65226 Lego Dynamics' Innovation Project for the 2025-2026 season UNEARTHED, providing a simple interface for serial communication testing and debugging for the Perlin noise renderer..
+GPRSerialTestSender is a Windows C++ application designed to send test data over a serial port. It is intended for use in FLL team 65226 Lego Dynamics' Innovation Project for the 2025-2026 season UNEARTHED, providing a simple interface for serial communication testing and debugging for the Perlin noise renderer.
 
 ## Features
 
